@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="container">
+
+        <div id="room-header">
+
+          <h1 id="room-name"></h1>
+
+          <div id="room-header-controls">
+            <img id="mic-icon" class="control-icon" src="icons/mic-off.svg" />
+            <img id="leave-icon" class="control-icon" src="icons/leave.svg" />
+          </div>
+        </div>
+    
+        <form id="form">
+          <div>
+            <h3>Select An Avatar:</h3>
+          </div>
+          <div id="avatars">
+              <img class="avatar-selection" src="avatars/male-1.png"/>
+              <img class="avatar-selection" src="avatars/male-2.png"/>
+              <img class="avatar-selection" src="avatars/male-4.png"/>
+              <img class="avatar-selection" src="avatars/male-5.png"/>
+
+              <img class="avatar-selection" src="avatars/female-1.png"/>
+              <img class="avatar-selection" src="avatars/female-2.png"/>
+              <img class="avatar-selection" src="avatars/female-4.png"/>
+              <img class="avatar-selection" src="avatars/female-5.png"/>
+          </div> 
+
+          <div id="form-fields">
+              <label>Display Name:</label>
+              <input required name="displayname" type="text" placeholder="Enter username..."/>
+      
+              <label>Room Name:</label>
+              <input required name="roomname" type="text" placeholder="Enter room name..."/>
+      
+              <input name="username" type="submit" value="Enter Room"/>
+          </div>
+      </form>
+    
+        <div id="members">
+    
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
