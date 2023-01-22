@@ -39,8 +39,8 @@ Add in basic HTML:
         <h1 id="room-name"></h1>
 
         <div id="room-header-controls">
-          <img id="mic-icon" src="icons/mic-off.svg" />
-          <img id="leave-icon" src="icons/leave.svg" />
+          <img id="mic-icon" class="control-icon" src="icons/mic-off.svg" />
+          <img id="leave-icon" class="control-icon" src="icons/leave.svg" />
         </div>
       </div>
 
