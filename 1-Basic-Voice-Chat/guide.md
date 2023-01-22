@@ -46,7 +46,7 @@ Add in basic HTML:
 
     <form id="form">
         <!-- <input name="displayname" type="text" placeholder="Enter display name..."/> -->
-        <input name="username" type="submit" value="Enter Room"/>
+        <input type="submit" value="Enter Room"/>
     </form>
 
     <div id="members">
