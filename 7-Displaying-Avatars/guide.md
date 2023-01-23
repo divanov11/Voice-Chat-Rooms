@@ -102,12 +102,11 @@ let newMember = `
 
 Currently, we have a border around our entire speaker wrapper and are highlighting the entire wrapper when the volume indicator hears a noise. The effect we want to achieve is to highlight just the image and not have a border at all around the speaker. 
 
-So let's remove the `border` and `border-radius` from our CSS file, then update the volume indicator method to look for the `avatar-${volume.uid}` class instead of `user-rtc-${volume.uid}.`
+So let's remove the `border`from our CSS file, then update the volume indicator method to look for the `avatar-${volume.uid}` class instead of `user-rtc-${volume.uid}.`
 
 ```css
 .speaker{
-  /* border:2px solid #fff;
-  border-radius: 50%; */
+  /* border:2px solid #fff;*/
   ...
 }
 ```
