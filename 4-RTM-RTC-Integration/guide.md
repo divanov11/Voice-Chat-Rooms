@@ -4,6 +4,65 @@ In order to add more functionality to our app like displaying user names & avata
 
 Agora RTC takes care of transmiting audio and video data, and it does that will. Using the Agora RTM (Signaling) we will be able to create a room chat room enviroment with settings to pass data back and fourth as needed, this can be for displaying the room participants, number of participants in a room, sending group or peir to peir messages and more.
 
+### Comparing RTC and RTM (Signaling) Events and Methods
+
+**Client Instance**
+
+```js
+//RTC
+rtcClient = AgoraRTC.createClient({ mode: "rtc", codec: "vp8" });
+
+//RTM
+rtmClient = AgoraRTM.createInstance(appid)
+await rtmClient.login({'uid':rtmUid, 'token':token})
+```
+
+**Joining Channel**
+
+```js
+//RTC
+await rtcClient.join(appid, roomId, token, rtcUid)
+
+//RTM
+channel = rtmClient.createChannel(roomId)
+await channel.join()
+```
+
+**Join Channel Event Listener**
+
+```js
+//RTC
+rtcClient.on('user-joined', handleUserJoined)
+
+//RTM
+channel.on('MemberJoined', handleMemberJoined)
+```
+
+**Leaving Channel**
+
+```js
+//RTC
+audioTracks.localAudioTrack.stop()
+audioTracks.localAudioTrack.close()
+
+rtcClient.unpublish()
+rtcClient.leave()
+
+//RTM
+channel.leave()
+rtmClient.logout()
+```
+
+**Leave Channel Event Listener**
+
+```js
+//RTC
+rtcClient.on("user-left", handleUserLeft);
+
+//RTM
+channel.on('MemberLeft', handleMemberLeft)
+```
+
 ### Rethinking Our Approach.
 
 Let's start by looking at some events and code that should be taken care of by agora rtm instead of rtc
