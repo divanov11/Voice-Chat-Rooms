@@ -17,7 +17,7 @@ For a little styling let's also add some `<label>` tags and a div around our for
         <label>Room Name:</label>
         <input name="roomname" type="text" placeholder="Enter room name..." required/>
 
-        <input name="username" type="submit" value="Enter Room"/>
+        <input type="submit" value="Enter Room"/>
     </div>
 </form>
 ```
