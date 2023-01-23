@@ -46,7 +46,7 @@ Now let's loop over our collection of HTML elements (avatar-selection) and add o
 In the event listener, we will add a function that adds the selected image `src` value to the value our our `avatars` variable and also change the border color and opacity to represent the selected image.
 
 ```js
-const avatars = document.getElementsByClassName('avatar selection')
+const avatars = document.getElementsByClassName('avatar-selection')
 
 for (let i=0; avatars.length > i; i++){
   
