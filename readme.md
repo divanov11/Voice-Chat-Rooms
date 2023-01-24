@@ -2,6 +2,8 @@
 
 A simple voice chat app using the Agora RTC And RTM Web SDK. 
 
+Watch the complete video course [here!](https://youtu.be/abka2ug0kbs)
+
 **Room**
 <img src="images/room-preview.png"/>
 
